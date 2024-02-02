@@ -30,3 +30,9 @@ This is a mongo db docker image and container example configuration, you can use
     > docker exec -it mongoContainer  bash
 
 -------------------------------------------------------------------------------
+### Build image using dockerfile
+
+    > docker build -t mongo_image .
+### Run the container using builded  image
+    > docker run --rm -d -p 25000:27017 --name mongoContainer mongo_image
+**here we're not using any volume or network**

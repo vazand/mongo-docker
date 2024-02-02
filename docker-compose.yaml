@@ -4,13 +4,13 @@ services:
   mongodb:
     build:
       context: .
-      dockerfile: Dockerfile  # Specify the name of your Dockerfile
+      dockerfile: Dockerfile  
     container_name: mongoContainer
     networks:
       - my_network
-    restart: unless-stopped
+    #restart: unless-stopped
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - mongoChatAppData:/data/db
 
