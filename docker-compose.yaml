@@ -10,7 +10,7 @@ services:
       - my_network
     #restart: unless-stopped
     ports:
-      - "27018:27017"
+      - "27017:27017"
     volumes:
       - mongoChatAppData:/data/db
 

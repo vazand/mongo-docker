@@ -36,3 +36,18 @@ This is a mongo db docker image and container example configuration, you can use
 ### Run the container using builded  image
     > docker run --rm -d -p 25000:27017 --name mongoContainer mongo_image
 **here we're not using any volume or network**
+
+-------------------------------------------------------------------------------
+###### In the mongod.conf 
+we have changed the bindIp from localhost(127.0.0.1) to any using 0.0.0.0
+so anyone can connect to this MongoDB server -> security issue
+
+If you want to allow only a specific Ip then add that Ip's in the bindIp and remove 0.0.0.0
+like 127.0.0.1, 192.153.0.17
+
+
+### For connecting from remte client 
+    >   mongosh --host yourHostIp -port 27017 
+
+
+END                                      
