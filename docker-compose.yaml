@@ -8,7 +8,7 @@ services:
     container_name: mongoContainer
     networks:
       - my_network
-    #restart: unless-stopped
+    restart: unless-stopped
     ports:
       - "27017:27017"
     volumes:
